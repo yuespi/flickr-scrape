@@ -131,6 +131,7 @@ if __name__ == '__main__':
     parser.add_argument('--max-pages', '-m', dest='max_pages', required=False, help='Max pages (default none)')
     parser.add_argument('--start-page', '-st', dest='start_page', required=False, help='Start page (default 1)')
     parser.add_argument('--bbox', '-b', dest='bbox', required=False, help='Bounding box to search in, separated by spaces like so: minimum_longitude minimum_latitude maximum_longitude maximum_latitude')
+    parser.add_argument('--sort', '-b', dest='sort', required=False, help='The order in which to sort returned photos. Deafults to date-posted-desc (unless you are doing a radial geo query, in which case the default sorting is by ascending distance from the point specified). The possible values are: date-posted-asc, date-posted-desc, date-taken-asc, date-taken-desc, interestingness-desc, interestingness-asc, and relevance. ')
     args = parser.parse_args()
 
     qs = args.q_search
